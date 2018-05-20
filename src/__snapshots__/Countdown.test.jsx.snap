@@ -1,0 +1,174 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Countdown /> compares snapshot of countdown with custom renderer 1`] = `
+<div>
+  1
+  01
+  01
+  50
+</div>
+`;
+
+exports[`<Countdown /> compares snapshot of countdown with daysInHours => true 1`] = `
+<span>
+  25
+  :
+  01
+  :
+  50
+</span>
+`;
+
+exports[`<Countdown /> compares snapshots and correct mounting of React children on countdown end 1`] = `
+<Countdown
+  controlled={false}
+  date={1482453477527}
+  daysInHours={false}
+  intervalDelay={1000}
+  precision={0}
+  zeroPadLength={0}
+>
+  <span>
+    1
+    :
+    1
+    :
+    1
+    :
+    50
+  </span>
+</Countdown>
+`;
+
+exports[`<Countdown /> compares snapshots and correct mounting of React children on countdown end 2`] = `
+<Countdown
+  controlled={false}
+  date={0}
+  daysInHours={false}
+  intervalDelay={1000}
+  precision={0}
+  zeroPadLength={0}
+>
+  <Completionist
+    countdown={
+      Object {
+        "completed": true,
+        "controlled": false,
+        "date": 0,
+        "days": 0,
+        "daysInHours": false,
+        "hours": 0,
+        "intervalDelay": 1000,
+        "milliseconds": 0,
+        "minutes": 0,
+        "precision": 0,
+        "seconds": 0,
+        "total": 0,
+        "zeroPadLength": 0,
+      }
+    }
+    name="master"
+  >
+    <div>
+      Completed! 
+      master
+       
+      Another child
+    </div>
+  </Completionist>
+</Countdown>
+`;
+
+exports[`<Countdown /> should trigger onTick and onComplete callbacks 1`] = `
+<Countdown
+  controlled={false}
+  date={1482363377071}
+  daysInHours={false}
+  intervalDelay={1000}
+  onComplete={[MockFunction]}
+  onTick={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "completed": false,
+            "days": 0,
+            "hours": 0,
+            "milliseconds": 0,
+            "minutes": 0,
+            "seconds": 6,
+            "total": 6000,
+          },
+        ],
+        Array [
+          Object {
+            "completed": false,
+            "days": 0,
+            "hours": 0,
+            "milliseconds": 0,
+            "minutes": 0,
+            "seconds": 6,
+            "total": 6000,
+          },
+        ],
+        Array [
+          Object {
+            "completed": false,
+            "days": 0,
+            "hours": 0,
+            "milliseconds": 0,
+            "minutes": 0,
+            "seconds": 6,
+            "total": 6000,
+          },
+        ],
+        Array [
+          Object {
+            "completed": false,
+            "days": 0,
+            "hours": 0,
+            "milliseconds": 0,
+            "minutes": 0,
+            "seconds": 6,
+            "total": 6000,
+          },
+        ],
+        Array [
+          Object {
+            "completed": false,
+            "days": 0,
+            "hours": 0,
+            "milliseconds": 0,
+            "minutes": 0,
+            "seconds": 6,
+            "total": 6000,
+          },
+        ],
+        Array [
+          Object {
+            "completed": false,
+            "days": 0,
+            "hours": 0,
+            "milliseconds": 0,
+            "minutes": 0,
+            "seconds": 6,
+            "total": 6000,
+          },
+        ],
+      ],
+    }
+  }
+  precision={0}
+  zeroPadLength={2}
+>
+  <span>
+    0
+    :
+    00
+    :
+    00
+    :
+    06
+  </span>
+</Countdown>
+`;
