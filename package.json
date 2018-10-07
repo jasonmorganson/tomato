@@ -1,7 +1,9 @@
 {
   "name": "tomato",
+  "description": "Tomato is a pomodoro app to help you crush it!",
   "version": "0.0.1",
   "private": true,
+  "bin": "bin/cli.js",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest"
