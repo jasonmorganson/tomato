@@ -1,8 +1,8 @@
-const {interval} = require('rxjs')
+const {timer} = require('rxjs')
 const {take, map} = require('rxjs/operators')
 const {ONE_MINUTE} = require('./constants.js')
 
-const minutes = interval(ONE_MINUTE)
+const minutes = timer(0, ONE_MINUTE)
 
 /**
  * Create step

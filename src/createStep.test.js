@@ -4,7 +4,7 @@ const step = require('./createStep.js')
 test('A step is observed as expected', () => {
   const type = 'A_STEP'
   const expected = {type, minutesRemaining: 1}
-  const expectedMarble = '1m (a |)'
+  const expectedMarble = '(a |)'
   const expectedValues = {a: expected}
   const actual = step(type, 1)
   testObservable(actual, expectedMarble, expectedValues)
@@ -13,7 +13,7 @@ test('A step is observed as expected', () => {
 test('The steps are always observed as expected', () => {
   const type = 'SOME_STEPS'
   const expected = {type, minutesRemaining: 1}
-  const expectedMarble = '1m a 59999ms (b |)'
+  const expectedMarble = 'a 59999ms (b |)'
   const expectedValues = {
     a: {type, minutesRemaining: 2},
     b: {type, minutesRemaining: 1}}
@@ -23,7 +23,7 @@ test('The steps are always observed as expected', () => {
 
 test('Steps are observed as expected for a short break', () => {
   const type = 'SHORT_BREAK'
-  const expectedMarble = '1m a 59999ms b 59999ms c 59999ms d 59999ms (e |)'
+  const expectedMarble = 'a 59999ms b 59999ms c 59999ms d 59999ms (e |)'
   const expectedValues = {
     a: {type, minutesRemaining: 5},
     b: {type, minutesRemaining: 4},
@@ -36,7 +36,7 @@ test('Steps are observed as expected for a short break', () => {
 
 test('Steps are observed as expected for a long break', () => {
   const type = 'LONG_BREAK'
-  const expectedMarble = '1m a 59999ms b 59999ms c 59999ms d 59999ms e 59999ms f 59999ms g 59999ms h 59999ms i 59999ms j 59999ms k 59999ms l 59999ms m 59999ms n 59999ms (o |)'
+  const expectedMarble = 'a 59999ms b 59999ms c 59999ms d 59999ms e 59999ms f 59999ms g 59999ms h 59999ms i 59999ms j 59999ms k 59999ms l 59999ms m 59999ms n 59999ms (o |)'
   const expectedValues = {
     a: {type, minutesRemaining: 15},
     b: {type, minutesRemaining: 14},
@@ -60,7 +60,7 @@ test('Steps are observed as expected for a long break', () => {
 
 test('Steps are observed as expected for a pomodoro', () => {
   const type = 'POMODORO'
-  const expectedMarble = '1m a 59999ms b 59999ms c 59999ms d 59999ms e 59999ms f 59999ms g 59999ms h 59999ms i 59999ms j 59999ms k 59999ms l 59999ms m 59999ms n 59999ms o 59999ms p 59999ms q 59999ms r 59999ms s 59999ms t 59999ms u 59999ms v 59999ms w 59999ms x 59999ms (y |)'
+  const expectedMarble = 'a 59999ms b 59999ms c 59999ms d 59999ms e 59999ms f 59999ms g 59999ms h 59999ms i 59999ms j 59999ms k 59999ms l 59999ms m 59999ms n 59999ms o 59999ms p 59999ms q 59999ms r 59999ms s 59999ms t 59999ms u 59999ms v 59999ms w 59999ms x 59999ms (y |)'
   const expectedValues = {
     a: {type, minutesRemaining: 25},
     b: {type, minutesRemaining: 24},
