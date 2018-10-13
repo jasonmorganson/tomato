@@ -2,6 +2,7 @@
 
 const program = require('caporal')
 const {name, version, description} = require('../package.json')
+const session = require('../src/session.js')
 
 program
 
@@ -18,6 +19,7 @@ program
     }
     else {
         logger.info("start focus")
+        session.subscribe(x => console.log(x))
     }
   })
   .default()
