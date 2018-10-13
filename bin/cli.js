@@ -32,6 +32,11 @@ program
     logger.info("skip")
   })
 
+  .command('status', 'Show status')
+  .action((args, options, logger) => {
+    logger.info("status")
+  })
+
   .command('show', 'Show UI')
   .action((args, options, logger) => {
     logger.info("show")
